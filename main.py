@@ -3,7 +3,7 @@ def get_book_text(filepath:str)->str:
         file_contents:str = f.read()
     return file_contents
 
-def main(filepath:str)->str:
+def main()->str:
     words = get_book_text("frankenstein.txt")
     return words
 

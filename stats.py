@@ -8,8 +8,8 @@ def get_characters(words)->None:
     for word in words_list:
         word.lower()
         for w in word:
-            if w in character_dict.keys():
-                w +=1
-            elif w not in character_dict.keys():
-                w = 1
+            if w not in character_dict.keys():
+                w =1
+            elif w in character_dict.keys():
+                w += 1
     return character_dict

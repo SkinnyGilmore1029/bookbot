@@ -3,13 +3,14 @@ def get_word_count(words)->str:
     return len(counted_words)
 
 def get_characters(words)->None:
-    words_list = words.split()
+    lower_case_words = words.lower()
+    words_list = lower_case_words.split()
     character_dict:dict[str,int] = {}
     for word in words_list:
-        word.lower()
-        for w in word:
-            if w not in character_dict.keys():
-                w =1
-            elif w in character_dict.keys():
-                w += 1
+        for letter in word:
+            if letter not in character_dict:
+                letter.lower()
+                character_dict[letter] = 1
+            else:
+                character_dict[letter] +=1
     return character_dict

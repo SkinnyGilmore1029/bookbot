@@ -9,8 +9,8 @@ def main()->str:
 
 def count_words()->str:
     words = get_book_text("books/frankenstein.txt")
-    counted_words = str(len(words.split()))
-    print(count_words)
+    split_words = words.split()
+    return len(split_words)
     
 
 if __name__ == "__main__":

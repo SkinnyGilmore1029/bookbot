@@ -2,7 +2,7 @@ def get_word_count(words)->str:
     counted_words = words.split()
     return len(counted_words)
 
-def get_characters(words)->None:
+def get_characters(words)->dict[str,int]:
     lower_case_words = words.lower()
     words_list = lower_case_words.split()
     character_dict:dict[str,int] = {}

@@ -3,9 +3,10 @@ def get_word_count(words)->str:
     return len(counted_words)
 
 def get_characters(words)->None:
-    words_list = words.split().lower()
+    words_list = words.split()
     character_dict:dict[str,int] = {}
     for w in words_list:
+        w.lower()
         if character_dict[w] in character_dict.keys():
             character_dict[w] +=1
         elif character_dict[w] not in character_dict.keys():

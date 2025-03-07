@@ -10,7 +10,7 @@ def get_word_count(words)->str:
 def main()->str:
     words = get_book_text("books/frankenstein.txt")
     count_words = get_word_count(words)
-    return len(count_words)
+    print(f'{count_words} words found in the document')
 
 
 if __name__ == "__main__":

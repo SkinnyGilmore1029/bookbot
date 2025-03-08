@@ -23,7 +23,9 @@ def main()->str:
     dict_lists = make_dict_list(chars_dict)
     print_report(book_path,num_words,dict_lists)
 
+def print_test():
+    print(sys.argv)
 
 if __name__ == "__main__":
-    main()
+    print_test()
 

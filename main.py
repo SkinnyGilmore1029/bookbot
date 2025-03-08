@@ -26,11 +26,5 @@ def main()->str:
     dict_lists = make_dict_list(chars_dict)
     print_report(book_path,num_words,dict_lists)
 
-def print_test():
-    if len(sys.argv) !=2:
-        print("Usage: python3 main.py <path_to_book>")
-        sys.exit(1)
-    print(sys.argv)
-
 if __name__ == "__main__":
     main()

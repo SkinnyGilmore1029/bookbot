@@ -16,7 +16,7 @@ def print_report(book_path:str,num_words:int,dict_list:list[dict[str,str|int]])-
         print(f"{d["char"]}: {d['count']}")
 
 def main()->str:
-    book_path = sys.argv()
+    book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
     num_words = get_word_count(text)
     chars_dict = get_characters(text)

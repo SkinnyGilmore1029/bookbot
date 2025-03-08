@@ -16,7 +16,10 @@ def print_report(book_path:str,num_words:int,dict_list:list[dict[str,str|int]])-
         print(f"{d["char"]}: {d['count']}")
 
 def main()->str:
-    book_path = "books/frankenstein.txt"
+    if len(sys.argv) !=2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    book_path = sys.argv[1]
     text = get_book_text(book_path)
     num_words = get_word_count(text)
     chars_dict = get_characters(text)
@@ -24,8 +27,10 @@ def main()->str:
     print_report(book_path,num_words,dict_lists)
 
 def print_test():
+    if len(sys.argv) !=2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
     print(sys.argv)
 
 if __name__ == "__main__":
-    print_test()
-
+    main()
